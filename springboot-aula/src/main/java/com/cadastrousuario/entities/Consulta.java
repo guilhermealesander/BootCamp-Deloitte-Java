@@ -17,24 +17,24 @@ public class Consulta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
     @Column(nullable = false)
-    private String data;
+    public String data;
 
     @Column(nullable = false)
-    private String hora;
+    public String hora;
 
     @Column(nullable = false)
-    private String medico;
+    public String medico;
 
     @Column(nullable = false)
-    private String especialidade;
+    public String especialidade;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id", nullable = false)
-    private DadosUsuario usuario;
+    public DadosUsuario usuario;
 
     public Consulta() {
     }

@@ -5,16 +5,16 @@ import jakarta.validation.constraints.NotBlank;
 public class ConsultaRequest {
 
     @NotBlank
-    private String data;
+    public String data;
 
     @NotBlank
-    private String hora;
+    public String hora;
 
     @NotBlank
-    private String medico;
+    public String medico;
 
     @NotBlank
-    private String especialidade;
+    public String especialidade;
 
     public String getData() {
         return data;

@@ -23,7 +23,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class CadastroController {
 
-    private final CadastroService cadastroService;
+    public final CadastroService cadastroService;
 
     public CadastroController(CadastroService cadastroService) {
         this.cadastroService = cadastroService;

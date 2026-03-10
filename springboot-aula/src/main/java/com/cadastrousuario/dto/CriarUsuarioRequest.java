@@ -8,21 +8,21 @@ import jakarta.validation.constraints.NotNull;
 public class CriarUsuarioRequest {
 
     @NotBlank
-    private String nome;
+    public String nome;
 
     @Email
     @NotBlank
-    private String email;
+    public String email;
 
     @NotNull
     @Min(0)
-    private Integer idade;
+    public Integer idade;
 
     @NotBlank
-    private String endereco;
+    public String endereco;
 
     @NotBlank
-    private String telefone;
+    public String telefone;
 
     public String getNome() {
         return nome;

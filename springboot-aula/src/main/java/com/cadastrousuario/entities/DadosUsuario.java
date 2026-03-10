@@ -18,25 +18,25 @@ public class DadosUsuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
     @Column(nullable = false)
-    private String nome;
+    public String nome;
 
     @Column(nullable = false)
-    private String email;
+    public String email;
 
     @Column(nullable = false)
-    private Integer idade;
+    public Integer idade;
 
     @Column(nullable = false)
-    private String endereco;
+    public String endereco;
 
     @Column(nullable = false)
-    private String telefone;
+    public String telefone;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Consulta> consultas = new ArrayList<>();
+    public List<Consulta> consultas = new ArrayList<>();
 
     public DadosUsuario() {
     }

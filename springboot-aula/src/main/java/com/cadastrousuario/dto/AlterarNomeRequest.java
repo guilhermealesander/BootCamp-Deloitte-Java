@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 public class AlterarNomeRequest {
 
     @NotBlank
-    private String novoNome;
+    public String novoNome;
 
     public String getNovoNome() {
         return novoNome;
