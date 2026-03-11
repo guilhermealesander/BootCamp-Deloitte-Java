@@ -1,6 +1,6 @@
 # 🏥 Sistema de Cadastro de Usuario e Agendamento de Consultas
 
-![Java](https://img.shields.io/badge/Java-25-orange)
+![Java](https://img.shields.io/badge/Java-17-orange)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Bootcamp](https://img.shields.io/badge/Bootcamp-Deloitte-green)
 ![GitHub](https://img.shields.io/badge/version-1.0-blue)
