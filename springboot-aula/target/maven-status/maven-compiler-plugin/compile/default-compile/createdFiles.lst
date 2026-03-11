@@ -1,0 +1,11 @@
+com\cadastrousuario\controller\ApiExceptionHandler.class
+com\cadastrousuario\repository\ConsultaRepository.class
+com\cadastrousuario\controller\CadastroController.class
+com\cadastrousuario\dto\CriarUsuarioRequest.class
+com\cadastrousuario\entities\Consulta.class
+com\cadastrousuario\entities\DadosUsuario.class
+com\cadastrousuario\service\CadastroService.class
+com\cadastrousuario\dto\ConsultaRequest.class
+com\cadastrousuario\repository\DadosUsuarioRepository.class
+com\cadastrousuario\CadastroUsuarioApplication.class
+com\cadastrousuario\dto\AlterarNomeRequest.class

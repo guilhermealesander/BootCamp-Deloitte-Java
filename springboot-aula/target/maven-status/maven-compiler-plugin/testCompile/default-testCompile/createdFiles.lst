@@ -1,0 +1,11 @@
+com\cadastrousuario\dto\AlterarNomeRequestTest.class
+com\cadastrousuario\controller\ApiExceptionHandlerTest.class
+com\cadastrousuario\service\CadastroServiceTest.class
+com\cadastrousuario\entities\DadosUsuarioTest.class
+com\cadastrousuario\dto\ConsultaRequestTest.class
+com\cadastrousuario\repository\DadosUsuarioRepositoryTest.class
+com\cadastrousuario\dto\CriarUsuarioRequestTest.class
+com\cadastrousuario\controller\ApiExceptionHandlerTest$FakeController.class
+com\cadastrousuario\controller\CadastroControllerTest.class
+com\cadastrousuario\entities\ConsultaTest.class
+com\cadastrousuario\repository\ConsultaRepositoryTest.class
