@@ -12,4 +12,6 @@ D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\repo
 D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\service\ConsultaService.java
 D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\service\UsuarioService.java
 D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\validation\ConsultaValidation.java
+D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\validation\CPFValidation.java
+D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\validation\TelefoneValidation.java
 D:\BootCamp-Deloitte-Java\springboot-aula\src\main\java\com\cadastrousuario\validation\UsuarioValidation.java

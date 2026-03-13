@@ -1,3 +1,4 @@
+com\cadastrousuario\validation\CPFValidation.class
 com\cadastrousuario\dto\ConsultaRequest.class
 com\cadastrousuario\repository\DadosUsuarioRepository.class
 com\cadastrousuario\service\ConsultaService.class
@@ -9,6 +10,7 @@ com\cadastrousuario\controller\ApiExceptionHandler.class
 com\cadastrousuario\repository\ConsultaRepository.class
 com\cadastrousuario\dto\CriarUsuarioRequest.class
 com\cadastrousuario\controller\UsuarioController.class
+com\cadastrousuario\validation\TelefoneValidation.class
 com\cadastrousuario\CadastroUsuarioApplication.class
 com\cadastrousuario\dto\AlterarNomeRequest.class
 com\cadastrousuario\model\Consulta.class
