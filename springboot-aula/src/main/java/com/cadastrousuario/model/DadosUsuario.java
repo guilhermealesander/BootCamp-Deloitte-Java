@@ -1,4 +1,4 @@
-package com.cadastrousuario.entities;
+package com.cadastrousuario.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -30,7 +30,13 @@ public class DadosUsuario {
     public Integer idade;
 
     @Column(nullable = false)
+    public Integer meses;
+
+    @Column(nullable = false)
     public String endereco;
+
+    @Column(nullable = false)
+    public String cpf;
 
     @Column(nullable = false)
     public String telefone;
@@ -41,63 +47,13 @@ public class DadosUsuario {
     public DadosUsuario() {
     }
 
-    public DadosUsuario(String nome, String email, Integer idade, String endereco, String telefone) {
+    public DadosUsuario(String nome, String email, Integer idade, Integer meses, String endereco, String cpf, String telefone) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
+        this.meses = meses;
         this.endereco = endereco;
+        this.cpf = cpf;
         this.telefone = telefone;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Integer getIdade() {
-        return idade;
-    }
-
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public List<Consulta> getConsultas() {
-        return consultas;
-    }
-
-    public void setConsultas(List<Consulta> consultas) {
-        this.consultas = consultas;
     }
 }

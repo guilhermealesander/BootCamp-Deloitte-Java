@@ -1,6 +1,6 @@
 package com.cadastrousuario.repository;
 
-import com.cadastrousuario.entities.DadosUsuario;
+import com.cadastrousuario.model.DadosUsuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

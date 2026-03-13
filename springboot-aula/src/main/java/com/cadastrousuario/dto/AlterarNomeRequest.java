@@ -6,12 +6,4 @@ public class AlterarNomeRequest {
 
     @NotBlank
     public String novoNome;
-
-    public String getNovoNome() {
-        return novoNome;
-    }
-
-    public void setNovoNome(String novoNome) {
-        this.novoNome = novoNome;
-    }
 }
