@@ -1,91 +1,81 @@
-# 🏥 Sistema de Cadastro de Usuario e Agendamento de Consultas
+# BootCamp Deloitte Java
 
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Bootcamp](https://img.shields.io/badge/Bootcamp-Deloitte-green)
-![GitHub](https://img.shields.io/badge/version-1.0-blue)
+![Java](https://img.shields.io/badge/Java-17-E76F00?style=for-the-badge)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.5-6DB33F?style=for-the-badge)
+![H2](https://img.shields.io/badge/Database-H2-1E88E5?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Em_Construcao-F4A261?style=for-the-badge)
 
-## 📌 Sobre o projeto
+## Visao Geral
 
-Este projeto é um **Sistema de Agendamento de Consultas Médicas** desenvolvido em **Java**, utilizando conceitos de **Programação Orientada a Objetos (POO)**.
+Este repositório reúne a evolução de um sistema de cadastro de usuário e agendamento de consultas médicas desenvolvido no BootCamp da Deloitte.
 
-O sistema funciona via **terminal (console)** e permite que o usuário:
+O projeto saiu de uma estrutura mais simples e evoluiu para uma API REST com Spring Boot, aplicando testes e princípios SOLID ao longo da implementação.
 
-- Realize cadastro
-- Visualize e altere e exclua seus dados
-- Agende consultas médicas
-- Liste consultas agendadas
-- Reagende consultas
+## Destaques
 
-> ⚠️ **Projeto em andamento:** novas melhorias serão adicionadas conforme a evolução do aprendizado.
+- Cadastro, consulta, alteração e exclusão de usuário
+- Agendamento, listagem e remarcar consultas
+- Persistência com H2
+- Testes unitários e de integração
+- Aplicação prática de `SRP` e `OCP`
+- Validações extensíveis para usuário
 
----
-
-## 🚀 Funcionalidades atuais
-
-✔ Cadastro de usuário  
-✔ Visualização dos dados cadastrados  
-✔ Alteração do nome do usuário  
-✔ Exclusão dos dados do usuário  
-✔ Agendamento de consultas  
-✔ Listagem de consultas  
-✔ Reagendamento de consultas  
-
----
-
-## 🧠 Conceitos aplicados
-
-- Programação Orientada a Objetos (POO)
-- Classes e Objetos
-- Construtores e Métodos
-- Encapsulamento (onde aplicável)
-- Estruturas condicionais (`if`, `switch`)
-- Estruturas de repetição (`for`)
-- Coleções (`ArrayList`)
-- Organização por pacotes
-
----
-
-## 📂 Estrutura do projeto
+## Estrutura
 
 ```text
-src
-│
-├── app
-│   └── Main.java
-│
-├── entity
-│   ├── DadosUsuario.java
-│   └── Consulta.java
-│
-└── service
-    ├── UsuarioService.java
-    └── ConsultaService.java
+BootCamp-Deloitte-Java
+├── springboot-aula
+│   ├── src/main/java/com/cadastrousuario
+│   │   ├── controller
+│   │   ├── dto
+│   │   ├── model
+│   │   ├── repository
+│   │   ├── service
+│   │   └── validation
+│   └── src/test/java/com/cadastrousuario
+└── src
+```
 
+## O que foi aplicado
 
-📁 app
+### SRP
 
-Contém a classe principal responsável pela execução do sistema e interação com o usuário.
+As responsabilidades foram separadas por contexto:
 
-📁 entity
+- `UsuarioController` e `ConsultaController`
+- `UsuarioService` e `ConsultaService`
+- `validation` isolada da regra principal de serviço
 
-Contém as entidades que representam os dados do sistema:
+### OCP
 
-DadosUsuario → informações do usuário
+As validações de usuário foram abertas para extensão por meio da abstração `UsuarioValidator`.
 
-Consulta → informações da consulta (data, hora, médico, especialidade)
+Hoje o projeto já suporta validadores independentes como:
 
-📁 service
+- `EmailUnicoValidator`
+- `CPFValidation`
+- `TelefoneValidation`
 
-Contém a lógica de negócio do sistema (regras e operações):
+Novas regras podem ser adicionadas sem alterar o fluxo principal do `UsuarioService`.
 
-UsuarioService → ações relacionadas ao usuário (exibir, alterar, excluir, etc.)
+## Projeto principal
 
-ConsultaService → ações relacionadas às consultas (marcar, listar, reagendar, etc.)
+O módulo ativo e mais atualizado está em:
 
+[`springboot-aula`](./springboot-aula/README.md)
 
-🚧 Status do projeto
+## Tecnologias
 
-⚠️ Em desenvolvimento
+- Java 17
+- Spring Boot
+- Spring Web
+- Spring Validation
+- Spring Data JPA
+- H2 Database
+- JUnit 5
+- Mockito
+- Maven
 
-O projeto ainda será evoluído.
+## Status
+
+O projeto continua sendo usado como base de estudo e evolução prática de arquitetura, testes e organização de código.
