@@ -46,4 +46,39 @@ public class ConsultaService {
         DadosUsuario usuario = usuarioService.obterUsuarioAtual();
         return consultaRepository.findByUsuarioIdOrderByIdAsc(usuario.id);
     }
+
+    @Transactional
+    public Consulta marcarConsultaParaUsuario(Long usuarioId, Consulta consulta) {
+        consultaValidation.validarConsulta(consulta);
+        DadosUsuario usuario = usuarioService.obterUsuarioPorId(usuarioId);
+        consulta.usuario = usuario;
+        return consultaRepository.save(consulta);
+    }
+
+    @Transactional
+    public Consulta remarcarConsulta(Long consultaId, Long usuarioId, Consulta novosDados) {
+        consultaValidation.validarConsulta(novosDados);
+        Consulta consulta = obterConsultaDoUsuario(consultaId, usuarioId);
+        consulta.data = novosDados.data;
+        consulta.hora = novosDados.hora;
+        consulta.medico = novosDados.medico;
+        consulta.especialidade = novosDados.especialidade;
+        return consultaRepository.save(consulta);
+    }
+
+    @Transactional
+    public void desmarcarConsulta(Long consultaId, Long usuarioId) {
+        consultaRepository.delete(obterConsultaDoUsuario(consultaId, usuarioId));
+    }
+
+    public List<Consulta> listarConsultasDoUsuario(Long usuarioId) {
+        usuarioService.obterUsuarioPorId(usuarioId);
+        return consultaRepository.findByUsuarioIdOrderByIdAsc(usuarioId);
+    }
+
+    private Consulta obterConsultaDoUsuario(Long consultaId, Long usuarioId) {
+        usuarioService.obterUsuarioPorId(usuarioId);
+        return consultaRepository.findByIdAndUsuarioId(consultaId, usuarioId)
+                .orElseThrow(() -> new IllegalStateException("Consulta nao encontrada para o usuario informado."));
+    }
 }

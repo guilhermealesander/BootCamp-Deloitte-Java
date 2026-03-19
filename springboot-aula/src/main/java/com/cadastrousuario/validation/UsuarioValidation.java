@@ -41,7 +41,7 @@ public class UsuarioValidation {
         if (email == null || email.trim().isEmpty()) {
             throw new IllegalArgumentException("O email do usuario deve ser informado.");
         }
-        usuario.email = email.trim();
+        usuario.email = email.trim().toLowerCase();
     }
 
     private void validarIdade(DadosUsuario usuario) {
